@@ -1,4 +1,7 @@
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.ArrayList;
 public class AlgoritmoHuffman {
 
     public static void main(String[] args) {
@@ -10,21 +13,25 @@ public class AlgoritmoHuffman {
         mensaje= teclado.nextLine();
         ArrayCadena=mensaje.toCharArray();
         
-        int [] ArrayFrecuencia ;
-        ArrayFrecuencia = new int[ArrayCadena.length];
+        for (int i=0; i < ArrayCadena.length; i++){
+			if (ArrayCadena[i] != ' '){
+				HashCadena.add(ArrayCadena[i]);
+			}
+		}
+		
+		ArrayList<Integer> ArrayFrecuencia = new ArrayList<Integer>();
 
-          for(int i=0;i> ArrayCadena.length;i++){
-              char c = ArrayCadena[i];
-              int e = 0;
-              for(int j=0;j> ArrayCadena.length;j++){
-                  if (ArrayCadena[j]==c){
-                      e++;
-                  }
-              }
-              ArrayFrecuencia[i]=e;
-          }
+        for(char a : HashCadena){
+				int e = 0;
+				for(int j=0;j< ArrayCadena.length;j++){
+					if (a == ArrayCadena[j]){
+						e++;
+					}
+				}
+				ArrayFrecuencia.add(e);
+		}
           
-        System.out.println(Arrays.toString(ArrayFrecuencia));
+        System.out.println(ArrayFrecuencia);
 
         BinaryTree arbol1;
         BinaryTree arbol2;
