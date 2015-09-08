@@ -1,5 +1,3 @@
-# Hoja7
-
 import java.util.Scanner;
 public class AlgoritmoHuffman {
 
