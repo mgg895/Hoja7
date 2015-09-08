@@ -1,5 +1,3 @@
-# Hoja7
-
 public class BinaryTree {
     
     protected String valor;
