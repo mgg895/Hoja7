@@ -19,14 +19,17 @@ public class BinaryTree implements Comparable<BinaryTree>{
     }
     
     @Override
-    public int compareTo(BinaryTree other){
-        int comparacion;
-        if (other.getFrecuencia() >= frecuencia){
-            comparacion = 1;
-        } else {
-            comparacion = 0;
-        }
-        return comparacion;
+    public int compareTo(BinaryTree other) {
+    /*if (this.frecuencia.compareTo(other.frecuencia) < 0)  
+        return -1;*/
+    if (this.valor == ' ' || other.valor == ' ')
+        return -1;
+    else if (this.frecuencia > other.frecuencia)
+        return 1;
+    else if (this.frecuencia < other.frecuencia)
+        return -1;
+    else
+        return 0;
     }
     
     public BinaryTree crearDerecha(char valorDerecha, int frecuenciaDerecha, BinaryTree self){
